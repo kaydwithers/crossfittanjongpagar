@@ -1,0 +1,573 @@
+/* Icons fix for Themes with Bootstrap */
+.rhc .fe-extrainfo-holder [class^="icon-"],
+.rhc .fe-extrainfo-holder [class*="icon-"] {
+	width: auto;
+	height: auto;
+	/*line-height: normal;*/
+	background-image: none;
+}
+/* end Icons fix for Themes with Bootstrap */
+
+/* single event */ 
+@media screen and (max-width:768px) {
+	.rhc.fe-extrainfo-container .row-fluid .fe-image-holder.span6 {
+		width: 48.717948717948715%;
+	}
+}
+
+@media screen and (max-width:480px) {
+	.rhc.fe-extrainfo-container .row-fluid .fe-image-holder.span6 {
+		width: 90%;
+	}
+	
+	.fc-button.fc-button-next, .fc-button.fc-button-nextYear, .fc-button.fc-button-prev, .fc-button.fc-button-prevYear {
+		padding:9px 0;
+	}
+}
+/* end single event */
+
+/* FLAT Ui Calendar Widget */
+.rhcalendar.for-widget.flat-ui-cal .fullCalendar .fc-header-title {
+    margin: 0;
+}
+
+.rhcalendar.for-widget.flat-ui-cal .fullCalendar .fc-header-title h2 {
+    font-size: initial;
+}
+.rhcalendar.for-widget.flat-ui-cal .fc-day,
+.rhcalendar.for-widget.flat-ui-cal .fc-last .fc-day {
+	width:14.2%;
+	line-height: 1;
+}
+
+.rhcalendar.for-widget.flat-ui-cal .fc-day-number {
+	text-align: center;
+	float: none;
+	padding: 0px;
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-ms-border-radius: 50%;
+	margin: 0 auto;
+	box-sizing: border-box;
+	width: 22px;
+	height: 22px;
+	font-size: 100%;
+	vertical-align: middle;
+	position: static;
+}
+
+.widget .rhcalendar.for-widget.flat-ui-cal .fc-day-number {
+    padding-top: 6px;
+}
+
+.entry-content .rhcalendar.for-widget.flat-ui-cal .fc-day-number {
+    padding-top: 6px;
+}
+
+.rhcalendar.for-widget.flat-ui-cal .fc-button:before {
+	font-size: 18px;
+}
+
+
+@media screen and (max-width:480px) {
+	.rhcalendar.for-widget.flat-ui-cal span.fc-button:before {
+		right:0px;
+	}
+}
+/* end FLAT Ui Calendar Widget */
+
+.rhc-empty-header.rhcalendar.not-widget.rhc_holder {
+margin-top:0;
+}
+
+/*bug fix, multiple organizers are rendered without spacing in the event list.*/
+.fe-extrainfo-value.taxonomy-organizer a:not(:last-child):after {
+	content: ', ';
+}
+
+.fc-is-allday .rhc-widget-show-on-time {
+	display:none;
+}
+/* Navigation on the right and title for mobile*/
+@media screen and (max-width:480px) {
+	.fc-header-cell.fc-header-right .fc-button.fc-button-prevYear,
+	.fc-header-cell.fc-header-right .fc-button.fc-button-prev,
+	.fc-header-cell.fc-header-right .fc-button.fc-button-next,
+	.fc-header-cell.fc-header-right .fc-button.fc-button-nextYear {
+		display: inline-block;
+		width: 25%;
+	}
+	
+	.rhcalendar .fullCalendar .fc-header-title {
+		margin-top:20px;
+		top: -60px;
+	}
+}
+/* end Navigation on the right for mobile*/
+
+.fullCalendar .fc-header-title h2 {
+    text-shadow: none;
+}
+
+/* Month view on mobile - other months hide */
+@media screen and (max-width:480px) {
+	.rhcalendar.fc-small .fullCalendar .fc-content .fc-view.fc-view-month table tbody tr td.fc-other-month {
+		visibility:hidden;
+		height:0;
+	}
+}
+
+/* Buttons Visited on Events box */
+.rhc .fc-button:visited {
+    color: #fff;
+}
+
+/* Dropdown Filters in Calendar View */
+.rhcalendar .rh-flat-ui .dropdown-menu li.active > a:hover,
+.rhcalendar .rh-flat-ui .dropdown-menu li.selected > a:hover,
+.rhcalendar .rh-flat-ui .dropdown-menu li.active > a.highlighted:hover,
+.rhcalendar .rh-flat-ui .dropdown-menu li.selected > a.highlighted:hover,
+.rhcalendar .rh-flat-ui .dropdown-menu li.active > a:focus,
+.rhcalendar .rh-flat-ui .dropdown-menu li.selected > a:focus,
+.rhcalendar .rh-flat-ui .dropdown-menu li.active > a.highlighted:focus,
+.rhcalendar .rh-flat-ui .dropdown-menu li.selected > a.highlighted:focus {
+	background-color:#3498db;
+	color:#FFFFFF;
+}
+
+.rhc-ce-holder.rhc-ce-form .dropdown-inverse li > a:hover {
+    color: #fff;
+}
+
+/* Social Connect */
+
+@font-face {
+	font-family: 'social-icons';
+	src:url('fonts/social-icons.eot?-wx9nay');
+	src:url('fonts/social-icons.eot?#iefix-wx9nay') format('embedded-opentype'),
+		url('fonts/social-icons.woff?-wx9nay') format('woff'),
+		url('fonts/social-icons.ttf?-wx9nay') format('truetype'),
+		url('fonts/social-icons.svg?-wx9nay#social-icons') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+.sco-btn .sco_social_login [class^=icon-],
+.sco-btn .sco_social_login [class*="icon-"],
+.sco-btn .icon-wp {
+	font-family: 'social-icons';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	
+	margin: 0 5px 0 0;
+	position: relative;
+	top: 2px;
+	font-size: 25px;
+}
+
+.sco-btn .sco_social_login .icon-facebook:before {
+	content: "\e600";
+}
+.sco-btn .sco_social_login .icon-youtube:before {
+	content: "\e608";
+}
+.sco-btn .sco_social_login .icon-vimeo:before {
+  	content: "\e60c";
+}
+.sco-btn .sco_social_login .icon-twitter:before {
+  	content: "\e605";
+}
+.sco-btn .sco_social_login .icon-stumbleupon:before {
+  	content: "\e60b";
+}
+.sco-btn .sco_social_login .icon-spotify:before {
+  	content: "\e044";
+}
+.sco-btn .sco_social_login .icon-skype:before {
+  	content: "\e604";
+}
+.sco-btn .sco_social_login  .icon-pinterest:before {
+ 	content: "\e046";
+}
+.sco-btn .sco_social_login .icon-myspace:before {
+  	content: "\e048";
+}
+.sco-btn .sco_social_login .icon-linkedin:before {
+  	content: "\e603";
+}
+.sco-btn .sco_social_login .icon-googleplus:before {
+  	content: "\e602";
+}
+.sco-btn .sco_social_login .icon-dribbble:before {
+	content: "\e60a";
+}
+.sco-btn .sco_social_login .icon-flickr:before {
+  	content: "\e601";
+}
+.sco-btn .sco_social_login .icon-behance:before {
+ 	 content: "\e609";
+}
+.sco-btn .sco_social_login .icon-microsoft:before {
+ 	 content: "\e606";
+}
+.sco-btn .icon-wp:before {
+	content: "\e607";
+}
+
+.sco-btn .sco_social_login,
+.sco-btn .sco-wp {
+	font-family: 'Lato';
+    font-weight: 300;
+}
+
+.sco-btn {
+	display: inline-block;
+	margin: 0 5px 5px 0;
+}
+
+.sco-btn .sco-wp,
+.sco-btn .sco_social_login {
+	padding: 13px 20px;
+	font-size: 22px;
+	line-height: 1.227;
+	border-radius: 6px;
+	border: none;
+	-webkit-font-smoothing: subpixel-antialiased;
+	-webkit-transition: 0.25s linear;
+	transition: 0.25s linear;
+	display: inline-block;
+	 -webkit-box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.15);
+}
+
+.sco-btn .sco_social_login:active,
+.sco-btn .sco-wp:active,
+.sco-btn .sco_social_login:hover,
+.sco-btn .sco-wp:hover{
+    outline: -webkit-focus-ring-color none;
+    box-shadow: none;
+}
+.sco-wp {
+	color: #ffffff;
+	background-color: #1abc9c;
+	background:#1abc9c;
+}
+
+.sco-wp:hover,
+.sco-wp:focus,
+.sco-wp:active {
+	background-color: #48c9b0;
+	background: #48c9b0;
+}
+
+.sco-wp:hover,
+.sco-wp:focus,
+.sco-wp:active,
+.sco_social_login:hover,
+.sco_social_login:focus,
+.sco_social_login:active {
+	background-image: none;
+	color: #fff;
+	outline: -webkit-focus-ring-color auto 0px;
+	box-shadow: 0 0 0 transparent;
+}
+.sco-pinterest {
+  color: #ffffff;
+  background-color: #cb2028;
+  background: #cb2028;
+}
+.sco-pinterest:hover,
+.sco-pinterest:focus,
+.sco-pinterest:active {
+  background-color: #d54d53;
+  background: #d54d53;
+}
+
+.sco-linkedin {
+  color: #ffffff;
+  background-color: #0072b5;
+  background: #0072b5;
+}
+
+.sco-linkedin:hover,
+.sco-linkedin:focus,
+.sco-linkedin:active {
+  background-color: #338ec4;
+  background: #338ec4;
+}
+
+.sco-stumbleupon {
+  color: #ffffff;
+  background-color: #ed4a13;
+  background: #ed4a13;
+}
+.sco-stumbleupon:hover,
+.sco-stumbleupon:focus,
+.sco-stumbleupon:active {
+  background-color: #f16e42;
+  background: #f16e42;
+}
+
+.sco-googleplus {
+  color: #ffffff;
+  background-color: #c0392b;
+  background: #c0392b;
+}
+.sco-googleplus:hover,
+.sco-googleplus:focus,
+.sco-googleplus:active {
+  background-color: #e74c3c;
+  background: #e74c3c;
+}
+
+.sco-facebook {
+  color: #ffffff;
+  background-color: #2f4b93;
+  background: #2f4b93;
+}
+.sco-facebook:hover,
+.sco-facebook:focus,
+.sco-facebook:active {
+  background-color: #596fa9;
+  background: #596fa9;
+}
+
+.sco-twitter {
+  color: #ffffff;
+  background-color: #00bdef;
+  background: #00bdef;
+}
+
+.sco-twitter:hover,
+.sco-twitter:focus,
+.sco-twitter:active {
+  background-color: #33caf2;
+  background: #33caf2;
+}
+
+
+.sco-microsoft {
+  color: #ffffff;
+  background-color: #2c3e50;
+  background: #2c3e50;
+}
+
+.sco-microsoft:hover,
+.sco-microsoft:focus,
+.sco-microsoft:active {
+  background-color: #415b76;
+  background: #415b76;
+}
+
+
+/* end Social Connect */
+
+/* There is an unidentified condition that in event list is displaying an empty date ( no events )*/
+.fc-event-list-date + .fc-event-list-date {
+  display: none;
+}
+
+/* Eventbrite */
+.rhc.fe-extrainfo-container .ebr-buy-ticket-btn-logo-1.fc-button {
+    font-size: 21px;
+	padding: 3px 15px;
+
+}
+
+.rhc.fe-extrainfo-container .ebr-buy-ticket-btn-logo-1.fc-button .rhceb-icon {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.rhc.fe-extrainfo-container .ebr-buy-ticket-btn-logo-1.fc-button .rhceb-icon:before {
+    content: "";
+    background-image: url(../images/eventbrite-badge-logo.svg);
+    background-size: 100%;
+	background-repeat:no-repeat;
+   	width: 45px;
+	height: 45px;
+	display: block;
+	margin: -2px 0 0;
+}
+
+.ebr-buy-ticket-btn-logo-1.fc-button span.rhc-buy-ticket-label {
+    display: inline-block;
+    vertical-align: top;
+    padding: 8px;
+}
+
+.ebr-buy-ticket-btn-logo-2.ebr-buy-ticket-btn {
+    background-image: url(../images/eventbrite-logo.svg);
+    background-color: transparent;
+    background-size: 100%;
+	background-repeat:no-repeat;
+   	width: 200px;
+	height: 70px;
+    margin: 0;
+    display: block;
+}
+
+.ebr-buy-ticket-btn-logo-2.ebr-buy-ticket-btn span.rhc-buy-ticket-label {
+	display:none;
+}
+
+.rhc-info-cell .rhceb-tickets-preview {
+    margin: 20px 0 0;
+}
+
+/* end Eventbrite */
+
+
+/* Edit Events (Community Events) */
+.rhc-ce-holder .fui-trash:before,
+.rhc-ce-holder .icon-edit:before {
+	font-family: 'Calendarize-it';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+    display: inline-block;
+    transition: .25s linear;
+    -webkit-transition: .25s linear;
+    background-color:#3498db;
+    color:#fff;
+    padding:10px;
+    border-radius:4px;
+    transition:.32s linear;
+    -webkit-transition:.32s linear;
+    -moz-transition:.32s linear;
+    font-size:20px;
+	position: relative;
+	top: 5px;
+}
+
+.rhc-ce-holder .fui-trash:before {
+	background-color:#e74c3c;
+}
+
+.rhc-ce-holder .fui-trash:hover:before {
+	background-color:#c0392b;
+}
+
+.rhc-ce-holder .icon-edit:before {
+	background-color:#2ecc71;
+}
+
+.rhc-ce-holder .icon-edit:hover:before {
+	background-color:#27ae60;
+}
+
+.rhc-ce-holder .fui-trash:before {
+	content:"\e60d";
+}
+
+.rhc-ce-holder .icon-edit:before {
+	content:"\e60e";
+	margin-right:10px;
+}
+
+.rhc-ce-holder a {
+	color:#000;
+}
+
+.rhc-ce-holder a:hover,
+.rhc-ce-holder a:focus {
+	color:#000;
+}
+/* end Edit Events (Community Events) */
+
+/* Image on calendar view */
+.rhcalendar .fc-content  a.fc-event.has-fc-image {
+    border-radius: 0;
+    border:none;
+}
+
+.rhcalendar .fc-content a.fc-event.has-fc-image .fc-event-inner {
+    padding: 3px;
+}
+
+.rhcalendar .fc-content a.fc-event.has-fc-image .fc-image-cont {
+    position: relative;
+    top: -3px;
+    left: -3px;
+}
+
+.rhcalendar .fc-content  a.fc-event.has-fc-image img.fc-image {
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.rhcalendar .fc-content a.fc-event.has-fc-image span.fc-event-time {
+    padding: 0 0 0 2px;
+}
+
+.rhcalendar .fc-content a.fc-event.has-fc-image span.fc-event-title {
+}
+
+/* end Image on calendar view */
+
+/* Events Box buttons */
+.rhc.fe-extrainfo-container .fc-button {
+    height: auto;
+    line-height: 1.1;
+    padding: 8px 10px;
+	box-sizing: border-box;
+}
+/* end Events Box buttons */
+
+/* Tooltip buttons */
+.fct-tooltip .fct-body a {
+    box-sizing: border-box;
+}
+/* end Tooltip Buttons */
+
+/* upcoming events in widget area */
+.widget .rhc-widget-upcoming-item .rhc .row-fluid [class*="span"] {
+    width: 100%;
+    float: none;
+    display: block;
+	margin: 0;
+}
+
+.widget .rhc-widget-upcoming-item .rhc .row-fluid [class*="span"]:empty {
+    display:none;
+}
+
+.widget .rhc-widget-upcoming-item .rhc label {
+    margin: 5px 0 10px;
+}
+
+.widget .rhc-widget-upcoming-item .rhc a {
+    line-height: 1.3;
+}
+
+.widget .rhc-widget-upcoming-item .rhc .fe-image-holder img {
+    width: 100%;
+    right: 0;
+    float: none;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.widget .rhc-widget-upcoming-item .rhc .row-fluid .fe-image-holder {
+    margin: 0 0 -2px;
+}
+/* end upcoming events in widget area */
+
+/* Visited event on calendar */
+.fullCalendar a.fc-event:visited {
+    color: #fff;
+}
+/* end Visited event on calendar */
