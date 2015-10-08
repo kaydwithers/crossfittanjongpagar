@@ -38,7 +38,7 @@ if ( empty( $onclick ) && isset( $img_link_large ) && 'yes' === $img_link_large 
 }
 
 if ( 'external_link' === $source ) {
-	$style = $external_style;
+	$border_color = $external_border_color;
 }
 
 $border_color = ( $border_color !== '' ) ? ' vc_box_border_' . $border_color : '';

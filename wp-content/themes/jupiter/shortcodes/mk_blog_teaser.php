@@ -25,12 +25,22 @@ if ($order) {
     $slider_query['order'] = $order;
 }
 
+$id = uniqid();
+
 $grid_width = $mk_options['grid_width'] - 40;
 
 $output .= '<section class="mk-blog-teaser '.$el_class.'">';
 
-$output .= '<div class="mk-swipe-slideshow mk-swiper-container blog-slider-item mk-swiper-slider" data-loop="true" data-freeModeFluid="true" data-slidesPerView="1" data-pagination="false" data-freeMode="false" data-slideshowSpeed="6000" data-animationSpeed="700" data-mousewheelControl="false" data-direction="horizontal" data-directionNav="true">' . "\n";
-$output .= '<div class="mk-swiper-wrapper">';
+$output .= '<div class="mk-swipe-slideshow mk-swiper-container blog-slider-item mk-swiper-slider   js-el" 
+            data-mk-component="SwipeSlideshow"
+            data-swipeSlideshow-config='{
+                "effect" : "slide'",
+                "displayTime" : "6000",
+                "transitionTime" : "700",
+                "nav" : ".mk-swipe-slideshow-nav-'.$id .'",
+                "hasNav" : "true" }' >' . "\n";
+
+$output .= '<div class="mk-swiper-wrapper mk-slider-holder">';
 $r = new WP_Query($slider_query);
     if ($r->have_posts()):
         while ($r->have_posts()):
@@ -40,7 +50,7 @@ $r = new WP_Query($slider_query);
 
                     $post_type = (get_post_format(get_the_id()) == '0' || get_post_format(get_the_id()) == '') ? 'image' : get_post_format(get_the_id());
 
-                    $output .= '<article id="teaser-entry-' . get_the_ID() . '" class="blog-slideshow-entry swiper-slide">';
+                    $output .= '<article id="teaser-entry-' . get_the_ID() . '" class="blog-slideshow-entry swiper-slide mk-slider-slide">';
 
 
                     $image_src_array = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full', true);
@@ -86,9 +96,14 @@ $r = new WP_Query($slider_query);
         endwhile;
     endif;
 $output .= '</div>';
-    $output .= '<a class="mk-swiper-prev swiper-arrows"><i class="mk-jupiter-icon-arrow-left"></i></a>';
-    $output .= '<a class="mk-swiper-next swiper-arrows"><i class="mk-jupiter-icon-arrow-right"></i></a>';
 
+$output .= '<div class="mk-swipe-slideshow-nav-'.$id .'">';
+    $output .= '<a class="mk-swiper-prev swiper-arrows" data-direction="prev"><i class="mk-jupiter-icon-arrow-left"></i></a>';
+    $output .= '<a class="mk-swiper-next swiper-arrows" data-direction="next"><i class="mk-jupiter-icon-arrow-right"></i></a>';
+$output .= '</div>';
+
+
+        $output .= '<img src="'. bfi_thumb( THEME_IMAGES . '/empty.png', array('width' => $image_width, 'height' => $image_height) ) .'" style="visibility: hidden;" />';
 
 $output .= '</div>';
 

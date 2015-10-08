@@ -646,7 +646,7 @@ vc_map(array(
             "param_name" => "excerpt_length",
             "value" => "200",
             "min" => "0",
-            "max" => "2000",
+            "max" => "5000",
             "step" => "1",
             "unit" => 'characters',
             "dependency" => array(
@@ -973,7 +973,7 @@ vc_map(array(
             "param_name" => "excerpt_length",
             "value" => "200",
             "min" => "0",
-            "max" => "2000",
+            "max" => "5000",
             "step" => "1",
             "unit" => 'characters'
         ),
@@ -1170,7 +1170,7 @@ vc_map(array(
             "param_name" => "excerpt_length",
             "value" => "200",
             "min" => "0",
-            "max" => "2000",
+            "max" => "5000",
             "step" => "1",
             "unit" => 'characters',
             "dependency" => array(

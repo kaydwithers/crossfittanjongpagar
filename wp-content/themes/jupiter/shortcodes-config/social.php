@@ -403,6 +403,11 @@ vc_map(array(
             "param_name" => "el_class",
             "value" => "",
             "description" => __("If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.", "mk_framework")
+        ),
+        array(
+            'type' => 'item_id',
+            'heading' => __( 'Item ID', 'mk_framework' ),
+            'param_name' => "item_id"
         )
     )
 ));

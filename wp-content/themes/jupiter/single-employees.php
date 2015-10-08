@@ -68,5 +68,6 @@ if ($style != 'style3') {
 			<?php endif ?>
 		</div>		
 	</div>
+	</div>
 <?php endwhile;?>
 <?php get_footer(); ?>

@@ -11568,7 +11568,8 @@ form#commentform .comment-textarea textarea {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-.portfolio-meta-wrapper .portfolio-categories {
+.portfolio-meta-wrapper .portfolio-categories,
+.portfolio-meta-wrapper .portfolio-date {
   font-size: 11px;
   letter-spacing: 1px;
   text-transform: uppercase;

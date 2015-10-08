@@ -171,7 +171,13 @@ function mk_portfolio_classic_loop(&$r, $atts)
      } else {
           $output .= '<h3 class="the-title">' . get_the_title() . '</h3><div class="clearboth"></div>';
      }
-     $output .= '<div class="portfolio-categories">' . implode(', ', $terms_name) . ' </div>';
+     
+      if ($meta_type == 'category') {
+             $output .= '<div class="portfolio-categories">' . implode(', ', $terms_name) . ' </div>';
+       } else {
+           $output .= '<time class="portfolio-date" datetime="' . get_the_date() . '">' . get_the_date() . '</time>';
+       }
+
      if ($disable_excerpt == 'true') {
           if($excerpt_length != 0) {
             ob_start();

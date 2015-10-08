@@ -5367,6 +5367,9 @@ a.list-group-item.active > .vc_badge,
   background-repeat: no-repeat;
   display: block;
   margin: 0;
+}
+.vc_general.vc_element-icon,
+.vc_element-icon {
   width: 32px;
   height: 32px;
 }

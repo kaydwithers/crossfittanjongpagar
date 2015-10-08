@@ -4,7 +4,7 @@
 .woocommerce, .woocommerce-page {
 	/* =General Layout Styles
 	-------------------------------------------------------------- */
-	
+
 	.col2-set {
 		.clearfix;
 		width: 100%;
@@ -21,7 +21,7 @@
 		height: auto;
 		max-width: 100%;
 	}
-	
+
 	/* =Product Page
 	-------------------------------------------------------------- */
 	div.product, #content div.product {
@@ -47,7 +47,7 @@
 			float: right;
 			width: 56%;
 		}
-		
+
 		/* Tabs on the product page */
 		.woocommerce-tabs {
 			clear: both;
@@ -64,11 +64,11 @@
 	#quantity, #content .quantity {
 		/* Disable input[type=number] buttons until the world is ready */
 		input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
-			-webkit-appearance: none; 
-  			margin: 0; 
+			-webkit-appearance: none;
+  			margin: 0;
 		}
 	}
-	
+
 	/* =Product Loops
 	-------------------------------------------------------------- */
 	.related, .upsells.products {
@@ -118,16 +118,18 @@
 				max-width: none!important;
 				&.four-column {
 					width: 33% !important;
-					
+
 				}
 			}
 			@media handheld, only screen and (max-width:767px) {
 				&.four-column, &.three-column {
-					width: 49% !important;	
+					width: 49% !important;
 				}
 			}
 			@media handheld, only screen and (max-width:600px) {
-				width: 100% !important;
+				&.four-column, &.three-column, &.two-column {
+					width: 100% !important;
+				}
 			}
 			.added_to_cart {
 				position: absolute;
@@ -423,14 +425,14 @@
 				}
 			}
 		}
-		
+
 	}
 	&.columns-3 {
 		ul.products {
 			li.product {
 				width: 33.2%;
 				@media handheld, only screen and (max-width:767px) {
-						width: 49% !important;	
+						width: 49% !important;
 				}
 				@media handheld, only screen and (max-width:600px) {
 					width: 100% !important;
@@ -443,10 +445,10 @@
 			li.product {
 				width: 24.9%;
 				@media handheld, only screen and (max-width:960px) {
-						width: 33% !important;	
+						width: 33% !important;
 				}
 				@media handheld, only screen and (max-width:767px) {
-						width: 49% !important;	
+						width: 49% !important;
 				}
 				@media handheld, only screen and (max-width:600px) {
 					width: 100% !important;
@@ -480,7 +482,7 @@
 			.menu;
 		}
 	}
-	
+
 	/* =Cart Page
 	-------------------------------------------------------------- */
 	table.cart, #content table.cart {
@@ -518,14 +520,14 @@
 			}
 		}
 		.shipping_calculator {
-			
-			
+
+
 		}
 		.cart_totals {
-		
+
 		}
 	}
-	
+
 	/* =Cart Sidebar
 	-------------------------------------------------------------- */
 	ul.cart_list, ul.product_list_widget {
@@ -533,7 +535,7 @@
 			.mediaright;
 		}
 	}
-	
+
 	/* =Forms
 	-------------------------------------------------------------- */
 	form {

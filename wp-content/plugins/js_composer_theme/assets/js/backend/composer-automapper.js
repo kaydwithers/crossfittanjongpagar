@@ -127,6 +127,7 @@ var vc_am = {
 				url: request_url,
 				dataType: 'json',
 				data: _.extend( data, { action: 'vc_automapper' } ),
+				data: _.extend( data, { action: 'vc_automapper', _vcnonce: window.vcAdminNonce } ),
 				context: this
 			} ).done( function ( data ) {
 				var result = model;

@@ -16,7 +16,9 @@ add_action( 'vc_before_init', 'vc_check_for_custom_css_build' );
 function vc_check_for_custom_css_build() {
 	$version = vc_settings()->getCustomCssVersion();
 	if ( vc_settings()->useCustomCss() && ( ! $version || version_compare( WPB_VC_VERSION, $version, '<>' ) ) ) {
-		add_action( 'admin_notices', 'vc_custom_css_admin_notice' );
+		if ( current_user_can( 'manage_options' ) ) {
+			add_action( 'admin_notices', 'vc_custom_css_admin_notice' );
+		}
 	}
 }
 

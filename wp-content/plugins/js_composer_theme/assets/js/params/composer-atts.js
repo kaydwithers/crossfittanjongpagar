@@ -395,7 +395,8 @@ window.vc.addTemplateFilter = function ( callback ) {
 					action: 'wpb_get_loop_settings',
 					value: this.data,
 					settings: this.settings,
-					post_id: vc.post_id
+					post_id: vc.post_id,
+					_vcnonce: window.vcAdminNonce
 				}
 			} ).done( this.createEditor );
 		},
@@ -984,7 +985,8 @@ window.vc.addTemplateFilter = function ( callback ) {
 						action: 'vc_get_autocomplete_suggestion',
 						shortcode: vc.active_panel.model.get( 'shortcode' ), // get current shortcode?
 						param: this.param_name,
-						query: request.term
+						query: request.term,
+						_vcnonce: window.vcAdminNonce
 					}, this.source_data( request, response ) )
 				} ).done( function ( data ) {
 					if ( that.options.unique_values ) {
@@ -1394,7 +1396,8 @@ window.vc.addTemplateFilter = function ( callback ) {
 						param: encodeURIComponent( JSON.stringify( param ) ),
 						shortcode: vc.active_panel.model.get( 'shortcode' ),
 						value: value,
-						vc_inline: true
+						vc_inline: true,
+						_vcnonce: window.vcAdminNonce
 					},
 					dataType: 'html',
 					context: this
@@ -1699,7 +1702,8 @@ window.vc.addTemplateFilter = function ( callback ) {
 					url: window.ajaxurl,
 					data: {
 						action: 'wpb_gallery_html',
-						content: value
+						content: value,
+						_vcnonce: window.vcAdminNonce
 					},
 					dataType: 'html',
 					context: this
@@ -1767,7 +1771,8 @@ window.vc.addTemplateFilter = function ( callback ) {
 									action: 'wpb_single_image_src',
 									content: value,
 									params: this.model.get( 'params' ),
-									post_id: post_id
+									post_id: post_id,
+									_vcnonce: window.vcAdminNonce
 								},
 								dataType: 'html',
 								context: this

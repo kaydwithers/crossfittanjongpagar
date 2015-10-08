@@ -21,75 +21,45 @@ Version:        4.4
 @font-face { font-family: 'Din900'; src: url('fonts/din-900.eot?#iefix') format('embedded-opentype'),  url('fonts/din-900.otf')  format('opentype'), url('fonts/din-900.woff') format('woff'), url('fonts/din-900.ttf')  format('truetype'), url('fonts/din-900.svg#din-900') format('svg'); font-weight: normal; font-style: normal; }
 
 body {
-  font-family: 'Din300', sans-serif;
+  font-family: 'ProximaNova300', sans-serif;
 }
 
 .mk-header-inner, .header-sticky-ready .mk-header-inner, .header-style-2.header-sticky-ready .mk-classic-nav-bg {
   border-bottom: 0px solid rgba(255,255,255,0) !important;
 }
 
-#menu-main li.menu-item a.menu-item-link {
-  color: #e61e25 !important;
-}
-
 .main-navigation-ul > li.menu-item > a.menu-item-link {
-  font-family: 'Din300', sans-serif;
+  font-family: 'ProximaNova700', sans-serif;
   letter-spacing: 1px;
+  font-size: 13px !important;
+}
+
+.main-navigation-ul:hover > li.menu-item:hover > a.menu-item-link:hover {
   color: #e61e25 !important;
 }
 
-.custom-button, 
-.wpcf7 input[type=submit],
-input[type=submit] {
-  margin-bottom: 15px;
-  margin-top: 0px;
-  min-width: 0px !important;
-  transition: all .3s ease-out;
+.content-padding {
+  padding: 100px 0 !important;
 }
 
-.custom-button--red, 
-.wpcf7 input[type=submit],
-input[type=submit] {
-  background-color: #e61e25;
-  margin-bottom: 0px;
-}
-
-.custom-button--outline {
-  
-}
-
-.custom-button--grey {
-  background-color: #e0e0e0;
-  color: #e61e25 !important;
-  margin-bottom: 0px;
-}
-
-.custom-button:hover, 
-.wpcf7 input[type=submit]:hover,
-input[type=submit]:hover {
-  box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18),0 4px 15px 0 rgba(0,0,0,0.15);
-  background-color: #333333;
-}
-
-.mk-button.large {
-  font-size: 30px;
-  font-family: 'Din500', sans-serif;
-  letter-spacing: 2px;
-  padding: 30px 20px 25px;
-  margin: 0 !important;
-}
-
-.mk-button.flat-dimension:hover {
-  background-color: #333333;
+.content-padding--large {
+  padding: 200px 0 !important;
 }
 
 #mk-header .header-logo a img {
   max-width: 300px !important;
 }
 
-.home-image--round img {
+.home-image--round img, .home-image__team--round img {
   border-radius: 200px;
+}
+
+.home-image--round img {
   max-width: 70%;
+}
+
+.home-image__team--round img {
+  max-width: 80%;
 }
 
 .logo-home img {
@@ -104,41 +74,7 @@ input[type=submit]:hover {
   margin: 20px 15px 10px 0;
 }
 
-.wpcf7 {
-
-}
-
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-.wpcf7 input[type="text"],
-.wpcf7 input[type="email"],
-.wpcf7 input[type="tel"],
-.wpcf7 textarea {
-  width: 200px;
-  text-align: center;
-  border: 0px solid #E1E3E4 !important;
-  background-color: #E1E3E4 !important;
-  color: #333 !important;
-  padding: 20px !important;
-  font-size: 15px !important;
-}
-
-.wpcf7-submit,
-input[type="submit"] {
-  width: 200px !important;
-  font-family: 'Din800', sans-serif;
-  color: #FFF;
-  text-align: center;
-  border: 0px solid #252525;
-  border-radius: 0;
-  padding: 20px 28px;
-  font-size: 14px;
-  line-height: 100%;
-  letter-spacing: 2px;
-}
-
-.logo-home--crossfitjournal { padding-top: 35px; }
+.logo-home--crossfitjournal { padding-top: 32px; }
 .logo-home--rogue { padding-top: 50px; }
 .logo-home--ufit { padding-top: 40px; }
 .logo-home--mwod { padding-top: 46px; }
@@ -149,39 +85,153 @@ input[type="submit"] {
   color: #FFF;
 }
 
-.ninja-forms-all-fields-wrap {
-  text-align: center;
+#mk-footer {
+  padding: 100px 0 !important;
+  background-color: #2e2e2e !important;
 }
 
-.field-wrap, #ninja_forms_required_items {
-  display: inline-block;
-  vertical-align: top;
+#mk-footer p {
+  font-family: 'ProximaNova300', sans-serif !important;
+  color: #999 !important;
+}
+
+#mk-footer span a {
+  color: #FFF !important;
+}
+
+
+/* Forms */
+
+.wpcf7 {
+
+}
+
+.ninja-forms-form label {
+  display: none;
+}
+
+.ninja-forms-form 
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea {
+  padding: 20px !important;
+  border: 2px solid #e2e3e5 !important;
+  background-color: #e2e3e5 !important;
+}
+
+.ninja-forms-form 
+input[type="submit"],
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  color: #333333 !important;
+  font-family: 'ProximaNova300', sans-serif;
+  text-align: center;
+  letter-spacing: 1px;
+  font-weight: normal;
+  font-size: 16px;
+}
+
+.ninja-forms-form input[type="submit"] {
+  border: 2px solid #252525;
+  border-radius: 0;
+  padding: 18px 28px !important;
+}
+
+
+/* Buttons */
+
+.custom-button--red, 
+.ninja-forms-form input[type=submit] {
+  border: 2px solid #e61e25;
+  background-color: #e61e25;
+  color: #FFF !important;
+}
+
+.custom-button--outline {
+  border: 2px solid #FFF;
+  color: #FFF !important;
+  margin-bottom: 0px;
+}
+
+.custom-button--grey {
+  background-color: #e0e0e0;
+  color: #e61e25 !important;
+  margin-bottom: 0px;
+}
+
+.mk-button.large {
+  font-family: 'ProximaNova300', sans-serif;
+}
+
+.mk-button.flat-dimension:hover {
+  background-color: #333333;
+}
+
+.custom-button, 
+.ninja-forms-form input[type=submit] {
+  margin-bottom: 15px;
+  margin-top: 0px;
+  min-width: 0px !important;
+  transition: all .3s ease-out;
+}
+
+.custom-button--red:hover, 
+.ninja-forms-form input[type=submit]:hover {
+  box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18),0 4px 15px 0 rgba(0,0,0,0.15);
+  background-color: #333;
+  border: 2px solid #333;
+}
+
+.custom-button--outline:hover {
+  background-color: #FFF !important;
+  color: #333 !important;
 }
 
 
 /* Typography */
 
+.ls-container h1, .ls-container p {
+  font-family: 'ProximaNova700', sans-serif;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.3);
+  text-align: center;
+  color: #FFF !important;
+}
+
+.ls-container h1 {
+  font-size: 55px;
+  text-transform: uppercase;
+}
+
+.ls-container p {
+  font-size: 26px;
+}
+
 p {
-  font-family: 'Din300', sans-serif;
+  font-family: 'ProximaNova300', sans-serif;
   font-size: 16px;
   line-height: 1.66em;
 }
 
 h1, h2, h4 {
-  letter-spacing: 2px;
+  font-family: 'ProximaNova700', sans-serif;
   font-weight: normal !important;
+}
+
+h1, h4 {
+  letter-spacing: 2px;
 }
 
 h1 {
   font-size: 55px !important;
-  font-family: 'Din800', sans-serif;
-  letter-spacing: 2px;
 }
 
 h2 {
-  font-family: 'Din800', sans-serif;
-  font-size: 55px !important;
+  font-size: 25px !important;
   margin-bottom: 30px;
+  letter-spacing: 5px;
 }
 
 .h2-title {
@@ -190,15 +240,7 @@ h2 {
 }
 
 h4 {
-  font-family: 'Din800', sans-serif;
-  font-size: 25px !important;
-}
-
-.image-text {
-  position: absolute;
-  top: 22.5%;
-  left: 5%;
-  right: 5%;
+  font-size: 16px !important;
 }
 
 .white-text {
@@ -206,11 +248,15 @@ h4 {
 }
 
 .grey-text {
-  color: #999999 !important;
+  color: #3d3d3d !important;
 }
 
 .red-text {
   color: #e61e25 !important;
+}
+
+.grey-bg {
+  background-color: #e2e3e5 !important;
 }
 
 

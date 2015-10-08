@@ -52,6 +52,12 @@ vc_map(array(
             "param_name" => "el_class",
             "description" => __("If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.", "mk_framework")
         ) ,
+        array(
+            'type' => 'css_editor',
+            'heading' => __( 'CSS box', 'js_composer' ),
+            'param_name' => 'css',
+            'group' => __( 'Design Options', 'js_composer' )
+        ),
     ) ,
     "js_view" => 'VcRowView'
 ));
@@ -533,8 +539,8 @@ vc_map(array(
             "param_name" => "bg_gradient",
             "width" => 150,
             "value" => array(
-                __('-- No Gradient ↓', "mk_framework") => "false",
-                __('Vertical ', "mk_framework") => "vertical",
+                __('-- No Gradient', "mk_framework") => "false",
+                __('Vertical ↓', "mk_framework") => "vertical",
                 __('Horizontal →', "mk_framework") => "horizontal",
                 __('Diagonal ↘', "mk_framework") => "left_top",
                 __('Diagonal ↗', "mk_framework") => "left_bottom",

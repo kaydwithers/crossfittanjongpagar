@@ -41,7 +41,7 @@ extract(shortcode_atts(array(
     'video_color_mask'      => '',
     'intro_effect'          => 'false',
     'animation'             => '',
-    'full_height'           => '',
+    'full_height'           => 'false',
     'last_page'             => 'false',
     'first_page'            => 'false',
 ), $atts));

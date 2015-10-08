@@ -408,14 +408,15 @@ if ( ! class_exists( 'WPBakeryShortCode' ) ) {
 			}
 
 			// Check template in theme directory
-			$user_template = vc_shortcodes_theme_templates_dir( $this->getFilename() . '.php' );
+			 $user_template = vc_shortcodes_theme_templates_dir( $this->getFilename() . '.php' );
                $parent_user_template = vc_shortcodes_theme_parent_templates_dir( $this->getFilename() . '.php' );
                //echo $user_template;
                if ( is_file( $user_template ) ) {
                     return $this->setTemplate( $user_template );
                } else if(is_file($parent_user_template)) {
                     return $this->setTemplate( $parent_user_template );
-}
+				}
+			
 
 			// Check default place
 			$default_dir = vc_manager()->getDefaultShortcodesTemplatesDir() . '/';
@@ -867,7 +868,7 @@ if ( ! class_exists( 'WPBakeryShortCode' ) ) {
 				$title = 'title="' . $params['title'] . '" ';
 			}
 
-			return '<i ' . $title . 'class="vc_element-icon' . ( ! empty( $params['icon'] ) ? ' ' . sanitize_text_field( $params['icon'] ) : '' ) . '"' . $data . '></i> ';
+			return '<i ' . $title . 'class="vc_general vc_element-icon' . ( ! empty( $params['icon'] ) ? ' ' . sanitize_text_field( $params['icon'] ) : '' ) . '"' . $data . '></i> ';
 		}
 
 		/**

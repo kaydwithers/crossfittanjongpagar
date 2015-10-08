@@ -419,8 +419,12 @@
   }
 }
 @media handheld, only screen and (max-width: 600px) {
-  .woocommerce ul.products li.product,
-  .woocommerce-page ul.products li.product {
+  .woocommerce ul.products li.product.four-column,
+  .woocommerce-page ul.products li.product.four-column,
+  .woocommerce ul.products li.product.three-column,
+  .woocommerce-page ul.products li.product.three-column,
+  .woocommerce ul.products li.product.two-column,
+  .woocommerce-page ul.products li.product.two-column {
     width: 100% !important;
   }
 }

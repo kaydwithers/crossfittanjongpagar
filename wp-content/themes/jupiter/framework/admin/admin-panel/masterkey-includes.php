@@ -61,7 +61,7 @@ $font_replacement_objects = array(
 	'#mk-breadcrumbs' => 'Breadcrumbs',
 	'.mk-skill-meter-title' => 'Skill Meter Titles',
 	'.mk-imagebox-shortcode' => 'Image Box Shortcode',
-	'.mk-event-countdown' => 'Even Countdown Shortcode'
+	'.mk-event-countdown' => 'Event Countdown Shortcode'
 );
 
 /*
