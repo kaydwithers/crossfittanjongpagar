@@ -24,7 +24,7 @@ body {
   font-family: 'ProximaNova300', sans-serif;
 }
 
-.mk-header-inner, .header-sticky-ready .mk-header-inner, .header-style-2.header-sticky-ready .mk-classic-nav-bg {
+#mk-header, .mk-header-inner, .header-sticky-ready .mk-header-inner, .header-style-2.header-sticky-ready .mk-classic-nav-bg {
   border-bottom: 0px solid rgba(255,255,255,0) !important;
 }
 
@@ -32,10 +32,15 @@ body {
   font-family: 'ProximaNova700', sans-serif;
   letter-spacing: 1px;
   font-size: 13px !important;
+  color: #444444 !important;
 }
 
 .main-navigation-ul:hover > li.menu-item:hover > a.menu-item-link:hover {
   color: #e61e25 !important;
+}
+
+.hero-ctr {
+  padding: 170px 0 90px;
 }
 
 .content-padding {
@@ -44,6 +49,10 @@ body {
 
 .content-padding--large {
   padding: 200px 0 !important;
+}
+
+.logos-padding {
+  padding: 70px 0 !important;
 }
 
 #mk-header .header-logo a img {
@@ -81,8 +90,25 @@ body {
 .logo-home--cfbt { padding-top: 43px; }
 .logo-home--wod { padding-top: 43px; }
 
+.multicolor.pricing-table .pricing-cols li.pricing-col {
+  border-radius: 0px;
+}
+
+.multicolor.pricing-table .pricing-cols .pricing-heading {
+  box-shadow: inset 0 0 0 0px rgba(0, 0, 0, 0.2);
+}
+
+.multicolor.pricing-table .pricing-cols .pricing-plan, 
+.multicolor.pricing-table .pricing-cols .pricing-price span {
+  text-shadow: 0px 0px 0 rgba(0, 0, 0, 0.3);
+}
+
 .footer-wrapper span a {
   color: #FFF;
+}
+
+.footer-wrapper span a:hover {
+  color: #e61e25 !important;
 }
 
 #mk-footer {
@@ -100,20 +126,28 @@ body {
 }
 
 
+
 /* Forms */
 
-.wpcf7 {
 
+.ninja-forms-form-wrap label {
+  font-weight: normal !important;
+  color: inherit;
 }
 
 .ninja-forms-form label {
   display: none;
 }
 
+.ninja-forms-field-error, .ninja-forms-error-msg {
+  color: #e2e3e5 !important;
+}
+
 .ninja-forms-form 
-input[type="text"],
-input[type="tel"],
-input[type="email"],
+input[type="text"], 
+input[type="tel"], 
+input[type="email"], 
+#theme-page select, 
 textarea {
   padding: 20px !important;
   border: 2px solid #e2e3e5 !important;
@@ -121,15 +155,15 @@ textarea {
 }
 
 .ninja-forms-form 
-input[type="submit"],
-input[type="text"],
-input[type="email"],
-input[type="tel"],
+input[type="submit"], 
+input[type="text"], 
+input[type="email"], 
+input[type="tel"], 
+#theme-page select, 
 textarea {
   color: #333333 !important;
   font-family: 'ProximaNova300', sans-serif;
   text-align: center;
-  letter-spacing: 1px;
   font-weight: normal;
   font-size: 16px;
 }
@@ -137,9 +171,14 @@ textarea {
 .ninja-forms-form input[type="submit"] {
   border: 2px solid #252525;
   border-radius: 0;
+  letter-spacing: 1px;
   padding: 18px 28px !important;
+  font-family: 'ProximaNova700', sans-serif;
 }
 
+.ninja-forms-form-wrap label {
+  font-weight: normal;
+}
 
 /* Buttons */
 
@@ -148,6 +187,7 @@ textarea {
   border: 2px solid #e61e25;
   background-color: #e61e25;
   color: #FFF !important;
+  text-transform: uppercase;
 }
 
 .custom-button--outline {
@@ -183,6 +223,7 @@ textarea {
   box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18),0 4px 15px 0 rgba(0,0,0,0.15);
   background-color: #333;
   border: 2px solid #333;
+  color: #FFF !important;
 }
 
 .custom-button--outline:hover {
@@ -191,37 +232,107 @@ textarea {
 }
 
 
+/* Timetable */
+
+.fullCalendar {
+  font-family: 'ProximaNova300', sans-serif;
+}
+
+.fullCalendar b {
+  font-family: 'ProximaNova700', sans-serif;
+}
+
+.rhcalendar.not-widget.rhc_holder {
+  margin-top: 0;
+}
+
+.fullCalendar a.fc-event {
+  color: #FFFFFF !important;
+}
+
+.fc-border-separate tr.fc-last th, .fc-border-separate tr.fc-last td {
+  border-bottom-width: 0px !important;
+}
+
+.fc-border-separate th, .fc-border-separate td {
+  border-width: 0px !important;
+}
+
+.fc-border-separate th.fc-last, .fc-border-separate td.fc-last {
+  border-right-width: 0px !important;
+}
+
+.fullCalendar .fc-state-highlight, .fullCalendar table tr:hover td.fc-state-highlight {
+  background: none !important;
+}
+
+.fc-header-right, .fc-event-time {
+  display: none !important;
+}
+
+table th {
+  font-weight: normal;
+  font-family: 'ProximaNova300', sans-serif;
+}
+
+.fc-button.fc-state-default {
+  background-color: #BBBBBB !important;
+}
+
+.fc-event-inner {
+  padding: 15px !important;
+}
+
+.fc-event-title {
+  font-size: 14px !important;
+  text-transform: uppercase;
+}
+
 /* Typography */
 
-.ls-container h1, .ls-container p {
+.hero-ctr h1, .hero-ctr p, .ls-container h1, .ls-container p, .page-title {
   font-family: 'ProximaNova700', sans-serif;
   text-shadow: 0 1px 1px rgba(0,0,0,0.3);
   text-align: center;
   color: #FFF !important;
 }
 
-.ls-container h1 {
+.hero-ctr h1, .ls-container h1 {
   font-size: 55px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.hero-ctr p, .ls-container p {
+  font-size: 26px;
+  margin: 20px 0 35px;
+
+  letter-spacing: 2px;
   text-transform: uppercase;
 }
 
-.ls-container p {
-  font-size: 26px;
+a {
+  color: #888888 !important;
+}
+
+a:hover {
+  color: #e61e25 !important;
 }
 
 p {
+  color: #999999 !important;
   font-family: 'ProximaNova300', sans-serif;
   font-size: 16px;
   line-height: 1.66em;
 }
 
-h1, h2, h4 {
+h1, h2, h4, h5, .mk-toggle-title {
   font-family: 'ProximaNova700', sans-serif;
   font-weight: normal !important;
 }
 
 h1, h4 {
-  letter-spacing: 2px;
+  letter-spacing: 3px;
 }
 
 h1 {
@@ -234,13 +345,31 @@ h2 {
   letter-spacing: 5px;
 }
 
-.h2-title {
+.page-title {
   line-height: 2.5em;
-  padding: 80px;
+  margin: 0;
+  padding: 60px;
+  font-size: 35px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
 }
 
 h4 {
+  margin-bottom: 15px;
+  text-transform: uppercase !important;
+}
+
+h4, h5, .mk-toggle-title {
   font-size: 16px !important;
+}
+
+.mk-toggle-title {
+  margin-bottom: 20px;
+}
+
+h5 {
+  margin-top: 40px;
+  text-transform: none !important;
 }
 
 .white-text {
@@ -259,6 +388,10 @@ h4 {
   background-color: #e2e3e5 !important;
 }
 
+.grey-bg p {
+  color: #777777 !important;
+}
+
 
 /* Helpers */
 
@@ -274,6 +407,14 @@ h4 {
   margin-bottom: 30px;
 }
 
+.push-half-left {
+  margin-left: 15px;
+}
+
+.push-half-right {
+  margin-right: 15px;
+}
+
 .flush {
   margin: 0 !important;
 }
@@ -283,5 +424,5 @@ h4 {
 }
 
 .soft-sides {
-  padding: 0 40px;
+  padding: 0 20px;
 }
